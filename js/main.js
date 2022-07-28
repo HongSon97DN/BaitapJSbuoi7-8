@@ -136,6 +136,42 @@ document.getElementById("sapXep").onclick = sapXepTangDan;
 
 // Bài 8
 
+// Bài 9
+function demSoNguyen() {
+    numberSN = [];
+    for(var i = 0; i < number.length; i++){
+        numberSN.push(number[i]);
+    }
 
+    var soNguyen = 0;
+    for(var i = 0; i < numberSN.length; i++) {
+        if (Number.isInteger(numberSN[i]) == true) {
+            soNguyen++;
+        }
+    }
+    document.getElementById("txtResult9").innerHTML = "Số nguyên: " + soNguyen;
+}
+document.getElementById("demSoNguyen").onclick = demSoNguyen;
 
+// Bài 10
+function soSanh() {
+    var soAm = 0;
+    var soDuong = 0;
 
+    for(var i = 0; i < number.length; i++) {
+        if (number[i] < 0) {
+            soAm++;
+        } else {
+            soDuong++;
+        }
+
+        if (soAm == soDuong) {
+            document.getElementById("txtResult10").innerHTML = "Số âm = số dương";
+        } else if (soAm > soDuong) {
+            document.getElementById("txtResult10").innerHTML = "Số âm > số dương";
+        } else {
+            document.getElementById("txtResult10").innerHTML = "Số âm < số dương";
+        }
+    }
+}
+document.getElementById("soSanh").onclick = soSanh;
