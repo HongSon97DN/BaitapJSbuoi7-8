@@ -101,6 +101,17 @@ document.getElementById("timSoChan").onclick = timSoChan;
 
 // Bài 6
 
+function doiCho() {
+    var viTri1 = Number(document.getElementById("viTri1").value);
+    var viTri2 = Number(document.getElementById("viTri2").value);
+
+    var temp = number[viTri1];
+    number[viTri1] = number[viTri2];
+    number[viTri2] = temp
+
+    document.getElementById("txtResult6").innerHTML = "Mảng sau khi đổi: " + number;
+}
+document.getElementById("doiCho").onclick = doiCho;
 
 // Bài 7
 
@@ -122,3 +133,9 @@ function sapXepTangDan() {
     document.getElementById("txtResult7").innerHTML = "Mảng sau khi sắp xếp: " + numberSx;
 }
 document.getElementById("sapXep").onclick = sapXepTangDan;
+
+// Bài 8
+
+
+
+
