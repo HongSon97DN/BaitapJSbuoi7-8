@@ -135,6 +135,35 @@ function sapXepTangDan() {
 document.getElementById("sapXep").onclick = sapXepTangDan;
 
 // Bài 8
+function kiemTraSNT(n) {
+
+    if (n <= 1) {
+        return 0;
+    }
+    for(var i = 2; i <= Math.sqrt(n); i++ ) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+function inSNTFirst() {
+    var ketQua = 0;
+
+    for(var j = 0; j < number.length; j++) {
+        var SNT = kiemTraSNT(number[j]);
+        if (SNT) {
+            ketQua = number[j];
+            break;
+        } else {
+            ketQua = -1;
+        }
+    }
+    document.getElementById("txtResult8").innerHTML = ketQua;
+}
+document.getElementById("timSNT").onclick = inSNTFirst;
+
 
 // Bài 9
 function demSoNguyen() {
